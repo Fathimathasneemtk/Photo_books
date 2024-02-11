@@ -1,0 +1,11 @@
+{%extends "base.html" %}
+{%block title%}post view {%endblock%}
+{%block body%}
+<div class="row">
+<form  action="" method="POST" enctype="multipart/form-data" class="col-sm-8 offset-4 my-5">
+    {% csrf_token %}
+    <h2>Upload Image</h2>
+    {{form.as_p}}
+<button type="submit" class="btn btn-success btn-lg " >submit</button>
+
+{%endblock%}
